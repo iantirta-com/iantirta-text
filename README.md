@@ -1,10 +1,18 @@
 # iantirta-text
 
+[![PyPI](https://img.shields.io/pypi/v/iantirta-text.svg)](https://pypi.org/project/iantirta-text/)
+[![Python](https://img.shields.io/pypi/pyversions/iantirta-text.svg)](https://pypi.org/project/iantirta-text/)
+[![Tests](https://github.com/iantirta-com/iantirta-text/actions/workflows/test.yml/badge.svg)](https://github.com/iantirta-com/iantirta-text/actions/workflows/test.yml)
+[![License](https://img.shields.io/github/license/iantirta-com/iantirta-text.svg)](https://github.com/iantirta-com/iantirta-text/blob/main/LICENSE)
+
+[![Documentation](https://img.shields.io/badge/docs-online-blue.svg)](https://iantirta-com.github.io/iantirta-text/)
+[![GitHub](https://img.shields.io/badge/GitHub-iantirta--com-181717?logo=github)](https://github.com/iantirta-com/iantirta-text)
+
 Text processing and sequence utilities for Python.
 
 `iantirta-text` provides small, composable utilities for working with
-Unicode text, normalization, romanization, filtering, and eventually
-sequence and phonetic processing.
+Unicode text, normalization, romanization, and filtering.
+
 
 ## Installation
 
@@ -60,13 +68,12 @@ print(filter_text(
 
 ## Documentation
 
-See the full documentation:
-
-https://iantirta-com.github.io/iantirta-text/
+See the [full documentation](https://iantirta-com.github.io/iantirta-text/).
 
 ## Project
 
-- Repository: https://github.com/iantirta-com/iantirta-text⁠
-- PyPI: https://pypi.org/project/iantirta-text/⁠
+- [Repository](https://github.com/iantirta-com/iantirta-text)
+- [PyPI](https://pypi.org/project/iantirta-text/)
+- [Documentation](https://iantirta-com.github.io/iantirta-text/)
 - License: Apache-2.0
 
