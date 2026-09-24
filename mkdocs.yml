@@ -1,0 +1,18 @@
+site_name: iantirta-text
+site_description: Text processing and sequence utilities for Python
+site_url: https://iantirta-com.github.io/iantirta-text/
+
+repo_name: iantirta-com/iantirta-text
+repo_url: https://github.com/iantirta-com/iantirta-text
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: installation.md
+  - Guides:
+      - Normalization: normalize.md
+      - Romanization: romanize.md
+      - Filtering: filter.md

@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "iantirta-text"
+version = "0.1.0a1"
+
+authors = [
+    { name = "Iantirta.com", email = "ian@iantirta.com" },
+]
+maintainers = [
+    { name = "Iantirta.com", email = "ian@iantirta.com" }
+]
+
+description = "Text processing and sequence utilities for Python"
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+keywords = [
+    "text",
+    "text-processing",
+    "romanization",
+    "transliteration",
+    "sequence",
+    "unicode",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+
+dependencies = []
+
+
+[project.optional-dependencies]
+zh = ["pypinyin"]
+ja = ["pykakasi"]
+ascii = ["anyascii"]
+
+romanize = ["iantirta-text[zh, ja]"]
+
+all = ["iantirta-text[romanize]"]
+
+docs = ["mkdocs-material"]
+test = ["pytest"]
+dev = ["iantirta-text[test, all]"]
+
+
+[project.urls]
+Homepage = "https://iantirta.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/iantirta-com/iantirta-text.git"
+"Bug Tracker" = "https://github.com/iantirta-com/iantirta-text/spam/issues"
+Changelog = "https://github.com/iantirta-com/iantirta-text/spam/blob/master/CHANGELOG.md"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra"]
