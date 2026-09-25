@@ -1,9 +1,6 @@
 import pytest
 
-from iantirta.text import (
-    Alignment, align, distance,
-    similarity
-)
+from iantirta.text import Alignment, align, distance, similarity
 
 
 def test_distance_equal() -> None:
