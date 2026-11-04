@@ -3,9 +3,9 @@
 
 from __future__ import annotations
 
-import typing as t
+from collections.abc import Sequence
 from dataclasses import dataclass
-
+from typing import Any, Generic, Literal, Mapping, TypeVar
 
 __all__ = [
     "Alignment",
@@ -14,12 +14,12 @@ __all__ = [
 ]
 
 
-T = t.TypeVar("T")
+T = TypeVar("T")
 
 
 def distance(
-    left: t.Sequence[T],
-    right: t.Sequence[T],
+    left: Sequence[T],
+    right: Sequence[T],
 ) -> int:
     """
     Calculate the Levenshtein edit distance between two sequences.
@@ -101,7 +101,7 @@ def distance(
 
 
 @dataclass(frozen=True, slots=True)
-class Alignment(t.Generic[T]):
+class Alignment(Generic[T]):
     """
     Represent a single alignment operation.
 
@@ -120,14 +120,14 @@ class Alignment(t.Generic[T]):
         does not contain a right-side element.
     """
 
-    operation: t.Literal["equal", "replace", "insert", "delete"]
+    operation: Literal["equal", "replace", "insert", "delete"]
     left: T | None
     right: T | None
 
 
 def align(
-    left: t.Sequence[T],
-    right: t.Sequence[T],
+    left: Sequence[T],
+    right: Sequence[T],
 ) -> list[Alignment[T]]:
     """
     Align two sequences using Levenshtein edit distance.
@@ -283,10 +283,10 @@ def align(
 
 
 def similarity(
-    left: t.Sequence[T],
-    right: t.Sequence[T],
+    left: Sequence[T],
+    right: Sequence[T],
     *,
-    normalize: bool | t.Mapping[str, t.Any] = False,
+    normalize: bool | Mapping[str, Any] = False,
 ) -> float:
     """
     Calculate normalized Levenshtein similarity between two sequences.
